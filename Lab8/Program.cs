@@ -53,7 +53,7 @@ namespace Lab8
                 Console.WriteLine("Сумма чисел = {0}", S);
                 Console.ReadKey();
 
-                //string[] arrayConsole = console.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+              
             }
 
         }
