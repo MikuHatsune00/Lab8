@@ -26,7 +26,7 @@ namespace Lab8
                 for (int i = 0; i < array.Length; i++)
                 {
                     array[i] = numbers.Next(0, 100);
-                    sw.Write("{0  }", array[i]);
+                    sw.Write("{0} ", array[i]);
 
                 }
             }
@@ -36,19 +36,24 @@ namespace Lab8
             {
                 string console = sr.ReadLine();
 
-                string[] arrayConsole = console.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] arrayConsole = console.Split();
                 int S = 0;
                 int[] intArray = new int[arrayConsole.Length];
                 for (int i = 0; i < arrayConsole.Length; i++)
                 {
-                    S += intArray[i];
-                    intArray[i] = Convert.ToInt32(arrayConsole[i]);
+                   if (arrayConsole[i].Length>0)
+                    {
+                        intArray[i] = Convert.ToInt32(arrayConsole[i]);
+                        S += intArray[i];
+                    }
+                    
                     Console.WriteLine("Сумма чисел = {0}", S);
                     Console.ReadKey();
                 }
+                Console.WriteLine("Сумма чисел = {0}", S);
+                Console.ReadKey();
 
-
-
+                //string[] arrayConsole = console.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             }
 
         }
